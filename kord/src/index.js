@@ -667,6 +667,7 @@ const DiscordKaiOS = {
   
   // Delete a message
   deleteMessage: async function(message) {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('Delete this message?')) {
       try {
         const response = await fetch(`${this.apiBase}/channels/${this.currentChannel}/messages/${message.id}`, {
@@ -752,6 +753,7 @@ const DiscordKaiOS = {
   
   // Handle logout
   logout: function() {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('Are you sure you want to log out?')) {
       localStorage.removeItem('discord-token');
       this.token = null;
