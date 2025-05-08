@@ -1,0 +1,98 @@
+{
+  "name": "Kord",
+  "description": "KaiOS Discord Chat for gamers and communities",
+  "version": "1.0.0",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png"
+  },
+  "developer": {
+    "name": "Kord Team",
+    "url": "https://wolfos.uk"
+  },
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": {
+      "description": "Required to access Discord API"
+    },
+    "desktop-notification": {
+      "description": "Required for Discord notifications"
+    },
+    "push": {
+      "description": "Required for receiving push notifications"
+    },
+    "device-storage:sdcard": {
+      "access": "readwrite",
+      "description": "Required for storing and accessing cached data"
+    },
+    "storage": {
+      "description": "Required for storing app data"
+    },
+    "spatialnavigation-app-manage": {
+      "description": "Required for D-pad navigation"
+    },
+    "alarms": {
+      "description": "Required for notification checks"
+    },
+    "audio-channel-notification": {
+      "description": "Required for notification sounds"
+    }
+  },
+  "activities": {
+    "discord-share": {
+      "href": "/share.html",
+      "disposition": "window",
+      "filters": {
+        "type": ["image/*", "video/*", "audio/*", "url"]
+      },
+      "returnValue": true
+    }
+  },
+  "messages": [
+    { "push": "/index.html" },
+    { "notification": "/index.html" }
+  ],
+  "locales": {
+    "en-US": {
+      "name": "Kord",
+      "description": "KaiOS Chat for gamers and communities"
+    },
+    "es": {
+      "name": "Kord",
+      "description": "KaiOS Chat para gamers y comunidades"
+    },
+    "fr": {
+      "name": "Kord",
+      "description": "KaiOS Chat pour joueurs et communautés"
+    },
+    "de": {
+      "name": "Kord",
+      "description": "KaiOS Chat für Spieler und Communities"
+    },
+    "pt-BR": {
+      "name": "Kord",
+      "description": "KaiOS Chat para jogadores e comunidades"
+    },
+    "ru": {
+      "name": "Kord",
+      "description": "KaiOS Чат для геймеров и сообществ"
+    },
+    "ja": {
+      "name": "Kord",
+      "description": "KaiOSゲーマーとコミュニティのためのチャット"
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": "portrait-primary",
+  "fullscreen": "true",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "cursor": false,
+  "background_color": "#36393f",
+  "theme_color": "#5865f2",
+  "categories": ["social", "games"],
+  "installs_allowed_from": ["*"],
+  "origin": "app://wolfos.uk"
+}
