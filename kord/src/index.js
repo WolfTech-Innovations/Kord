@@ -158,6 +158,7 @@ const DiscordKaiOS = {
       default:
         // If on main screen, ask if user wants to quit
         if (this.currentView === 'serverList') {
+          // eslint-disable-next-line no-restricted-globals
           if (confirm('Exit Kord?')) {
             window.close();
           }
