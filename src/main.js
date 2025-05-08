@@ -1,15 +1,4 @@
-/**
- * Discord for KaiOS
- * A lightweight client implementation for KaiOS feature phones
- * 
- * KaiOS devices typically have:
- * - Limited RAM (512MB-1GB)
- * - Small screen (240x320 or similar)
- * - D-pad navigation with no touchscreen
- * - Limited processing power
- */
-
-// Main application structure
+// Main application
 const DiscordKaiOS = {
   currentView: 'serverList',
   selectedIndex: 0,
@@ -24,7 +13,7 @@ const DiscordKaiOS = {
   
   // Initialize the application
   init: function() {
-    console.log('Initializing Discord for KaiOS...');
+    console.log('Initializing Kord for KaiOS...');
     this.setupEventListeners();
     this.loadStoredCredentials();
     this.renderLoginScreen();
@@ -160,7 +149,7 @@ const DiscordKaiOS = {
       default:
         // If on main screen, ask if user wants to quit
         if (this.currentView === 'serverList') {
-          if (confirm('Exit Discord?')) {
+          if (confirm('Exit Kord?')) {
             window.close();
           }
         }
@@ -186,7 +175,7 @@ const DiscordKaiOS = {
     const container = document.getElementById('app');
     container.innerHTML = `
       <div class="login-screen">
-        <div class="logo">Discord</div>
+        <div class="logo">Kord</div>
         <form id="login-form">
           <input type="email" id="email" placeholder="Email" class="selectable selected" />
           <input type="password" id="password" placeholder="Password" class="selectable" />
